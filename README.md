@@ -23,3 +23,15 @@ fabricante, https://firebase.google.com/docs/functions/get- started#initialize-y
 su entrega.
 18. Subir todo el proyecto a CodeSandbox y que compile ahí
 para así evitar problemas de compilación en el ordenador del consultor. Poner el enlace al documento de entrega. Si el proyecto no está funcionando y correctamente compilado en CodeSandbox, se bajarán 2 puntos de la nota final.
+<<<<<<< HEAD
+=======
+
+
+## Equipo Code067
+* Jaume Fité Planes
+* Leidi Quiceno Baltazar
+* Giancarlo Spadolini Zucchiatti
+* Xavier Matoses Meseguer
+
+Diciembre 2023
+>>>>>>> 402c404758c8cab87ff55f28724419ccabf69cd5

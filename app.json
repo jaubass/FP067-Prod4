@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Frontend-Prod4",
+    "slug": "Frontend-Prod4",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.code67.prod4"
+    },
+    "android": {
+      "package": "com.code67.prod4"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
