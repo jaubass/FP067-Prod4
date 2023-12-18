@@ -17,13 +17,8 @@ incluya al consultor y al equipo. Para cada producto se tendrá que crear un git
 13. Preparar el entorno para la programación del envío de mensajes, siguiendo las instrucciones del
 fabricante, https://firebase.google.com/docs/functions/get- started#initialize-your-projectLinks to an external site.
 14. Importar los módulos para comenzar a programar nuestro trigger siguiendo las instrucciones del fabricante, https://firebase.google.com/docs/functions/get- started#import-the-required-modules-and-initialize-an- appLinks to an external site.
-15. Activar el envío de un push messaging usando los eventos onWrite() y onUpdate() de la base de datos
-        
-(https://firebase.google.com/docs/functions/database-
-events#set_the_event_handlerLinks to an external site.) 
-16. Realizar todo el proceso anterior descrito, para Angular
-usando Firebase Messaging y un proyecto creado para
-nuestra aplicación con Angular
+15. Activar el envío de un push messaging usando los eventos onWrite() y onUpdate() de la base de datos (https://firebase.google.com/docs/functions/database- events#set_the_event_handlerLinks to an external site.) 
+16. Realizar todo el proceso anterior descrito, para Angular usando Firebase Messaging y un proyecto creado para nuestra aplicación con Angular
 17. Copiar el enlace de Github en un documento de texto para
 su entrega.
 18. Subir todo el proyecto a CodeSandbox y que compile ahí
