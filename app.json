@@ -19,7 +19,8 @@
       "bundleIdentifier": "com.code67.prod4"
     },
     "android": {
-      "package": "com.code67.prod4"
+      "package": "com.code67.prod4",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
