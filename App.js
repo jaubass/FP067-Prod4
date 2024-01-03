@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
-
+import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Notifications from 'expo-notifications';
 import * as Permissions from 'expo-permissions';
+import messaging from '@react-native-firebase/messaging';  // Importar el módulo de mensajería de Firebase
 
 // Application imports
 import { Home } from './app/views/Home';
 import { Detail } from './app/views/Detail';
 import { Player } from './app/views/Player';
-
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -20,14 +20,6 @@ Notifications.setNotificationHandler({
 });
 
 async function sendPushNotification(expoPushToken) {
-  const message = {
-    to: expoPushToken,
-    sound: 'default',
-    title: 'Original Title',
-    body: 'And here is the body!',
-    data: { someData: 'goes here' },
-  };
-
   await fetch('https://exp.host/--/api/v2/push/send', {
     method: 'POST',
     headers: {
@@ -61,8 +53,6 @@ export default function App() {
       const token = (await Notifications.getExpoPushTokenAsync()).data;
       console.log('Expo Push Token:', token);
       setExpoPushToken(token);
-
-      // Puedes enviar el token a tu servidor o utilizarlo según tus necesidades.
     };
 
     registerForPushNotificationsAsync();
@@ -80,6 +70,17 @@ export default function App() {
       Notifications.removeNotificationSubscription(responseListener.current);
     };
   }, []);
+
+  const obtenerTokenDeRegistro = async () => {
+    try {
+      const token = await messaging().getToken();
+      console.log('Token de Registro FCM:', token);
+    } catch (error) {
+      console.error('Error al obtener el token:', error);
+    }
+  };
+
+  obtenerTokenDeRegistro();
 
   return (
     <NavigationContainer>
