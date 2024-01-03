@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Notifications from 'expo-notifications';
 import * as Permissions from 'expo-permissions';
-import messaging from '@react-native-firebase/messaging';  // Importar el módulo de mensajería de Firebase
+import messaging from '@react-native-firebase/messaging';  
 
 // Application imports
 import { Home } from './app/views/Home';
