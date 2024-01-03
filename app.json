@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "com.code67.prod4",
-    "slug": "com.code67.prod4",
+    "name": "Frontend-Prod3",
+    "slug": "Frontend-Prod3",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,22 +14,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "ios": {
+      "supportsTablet": true
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "googleServicesFile": "./app/config/google-services.json",
-      "package": "com.code67.prod4"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "@react-native-firebase/app"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.code67.prod4"
     }
   }
 }
