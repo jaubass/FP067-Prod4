@@ -26,7 +26,7 @@ export const db = getFirestore(app);
 // Ver la respuesta: de Frank van Puffelen (https://stackoverflow.com/a/71345673)
 // (Empleado de Google Cloud)
 //     * Parece que `once` ya no es el método preferido.
-//     * Hemos usado getDocs y mostrado lar respuesta por la consola de expo.
+//     * Hemos usado getDocs y mostrado la respuesta por la consola de expo.
 
 import { collection, getDocs } from "firebase/firestore"; // TEST
 async function testDB() {

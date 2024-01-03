@@ -48,6 +48,26 @@ const getToken = async () => {
 
 // CODIGO ANTIGUO
 /* 
+
+const registerForPushNotificationsAsync = async () => {
+  const { status } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+  if (status !== 'granted') {
+    const { status: askStatus } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+    if (askStatus !== 'granted') {
+      console.log('Permiso para notificaciones push denegado');
+      return;
+    }
+  }
+
+  const token = (await Notifications.getExpoPushTokenAsync()).data;
+  console.log('Expo Push Token:', token);
+
+  // Aquí puedes enviar el token a tu servidor o utilizarlo según tus necesidades.
+};
+
+componentDidMount() {
+  registerForPushNotificationsAsync();
+}
 export default function App() {
   return (
     <NavigationContainer>
