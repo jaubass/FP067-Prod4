@@ -3,8 +3,8 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Notifications from 'expo-notifications';
-import * as Permissions from 'expo-permissions';
-import messaging from '@react-native-firebase/messaging';  
+// import * as Permissions from 'expo-permissions';
+import messaging from '@react-native-firebase/messaging';
 
 // Application imports
 import { Home } from './app/views/Home';
@@ -19,41 +19,41 @@ Notifications.setNotificationHandler({
   }),
 });
 
-async function sendPushNotification(expoPushToken) {
-  await fetch('https://exp.host/--/api/v2/push/send', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Accept-encoding': 'gzip, deflate',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(message),
-  });
-}
+// async function sendPushNotification(expoPushToken) {
+//   await fetch('https://exp.host/--/api/v2/push/send', {
+//     method: 'POST',
+//     headers: {
+//       Accept: 'application/json',
+//       'Accept-encoding': 'gzip, deflate',
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(message),
+//   });
+// }
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [expoPushToken, setExpoPushToken] = useState('');
+  // const [expoPushToken, setExpoPushToken] = useState('');
   const [notification, setNotification] = useState(false);
   const notificationListener = useRef();
   const responseListener = useRef();
 
   useEffect(() => {
-    const registerForPushNotificationsAsync = async () => {
-      const { status } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
-      if (status !== 'granted') {
-        const { status: askStatus } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
-        if (askStatus !== 'granted') {
-          console.log('Permiso para notificaciones push denegado');
-          return;
-        }
-      }
+    // const registerForPushNotificationsAsync = async () => {
+    //   const { status } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+    //   if (status !== 'granted') {
+    //     const { status: askStatus } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+    //     if (askStatus !== 'granted') {
+    //       console.log('Permiso para notificaciones push denegado');
+    //       return;
+    //     }
+    //   }
 
-      const token = (await Notifications.getExpoPushTokenAsync()).data;
-      console.log('Expo Push Token:', token);
-      setExpoPushToken(token);
-    };
+    //   const token = (await Notifications.getExpoPushTokenAsync()).data;
+    //   console.log('Expo Push Token:', token);
+    //   setExpoPushToken(token);
+    // };
 
     registerForPushNotificationsAsync();
 
