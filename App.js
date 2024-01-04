@@ -11,12 +11,19 @@ import { Player } from './app/views/Player';
 import { app } from './app/config/db'; // Firebase
 
 // Firebase messages
-// console.log("Platform.OS", Platform.OS);
-// const messaging = getMessaging(app);
-// Only works on web
-// https://www.reddit.com/r/reactnative/comments/1460co7/typeerror_cannot_read_property_addeventlistener/
+const platformOs = Platform.select({
+  ios: 'ios',
+  android: 'android',
+  default: 'default'
+});
+console.log({platformOs});
 
-
+if (platformOs === 'default') {
+  // Only works on web
+  // https://www.reddit.com/r/reactnative/comments/1460co7/typeerror_cannot_read_property_addeventlistener/
+  // https://firebase.google.com/docs/cloud-messaging/js/receive
+  const messaging = getMessaging(app);
+}
 
 
 
@@ -29,13 +36,13 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen name="Detail" component={Detail}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen name="Player" component={Player}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
