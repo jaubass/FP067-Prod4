@@ -19,6 +19,7 @@ const platformOs = Platform.select({
 console.log({platformOs});
 
 if (platformOs === 'default') {
+  console.log("I AM IN WEB");
   // Only works on web
   // https://www.reddit.com/r/reactnative/comments/1460co7/typeerror_cannot_read_property_addeventlistener/
   // https://firebase.google.com/docs/cloud-messaging/js/receive
