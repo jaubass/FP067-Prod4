@@ -21,21 +21,21 @@ export const db = getFirestore(app);
 
 
 
-// TEST
-// https://stackoverflow.com/questions/71345649/how-to-use-ref-once-with-firebase-9
-// Ver la respuesta: de Frank van Puffelen (https://stackoverflow.com/a/71345673)
-// (Empleado de Google Cloud)
-//     * Parece que `once` ya no es el método preferido.
-//     * Hemos usado getDocs y mostrado la respuesta por la consola de expo.
+// // TEST
+// // https://stackoverflow.com/questions/71345649/how-to-use-ref-once-with-firebase-9
+// // Ver la respuesta: de Frank van Puffelen (https://stackoverflow.com/a/71345673)
+// // (Empleado de Google Cloud)
+// //     * Parece que `once` ya no es el método preferido.
+// //     * Hemos usado getDocs y mostrado la respuesta por la consola de expo.
 
-import { collection, getDocs } from "firebase/firestore"; // TEST
-async function testDB() {
-    console.log("TESTING DB");
-    const querySnapshot = await getDocs(collection(db, "data"));
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().ciudad}`);
-    });
-    console.log("TESTING DB END");
-}
+// import { collection, getDocs } from "firebase/firestore"; // TEST
+// async function testDB() {
+//     console.log("TESTING DB");
+//     const querySnapshot = await getDocs(collection(db, "data"));
+//     querySnapshot.forEach((doc) => {
+//         console.log(`${doc.id} => ${doc.data().ciudad}`);
+//     });
+//     console.log("TESTING DB END");
+// }
 
-testDB(); // TEST
+// testDB(); // TEST

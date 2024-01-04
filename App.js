@@ -4,12 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Notifications from 'expo-notifications';
 // import * as Permissions from 'expo-permissions';
+import {PermissionsAndroid} from 'react-native';
+
 import messaging from '@react-native-firebase/messaging';
 
 // Application imports
 import { Home } from './app/views/Home';
 import { Detail } from './app/views/Detail';
 import { Player } from './app/views/Player';
+
+PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -55,7 +59,7 @@ export default function App() {
     //   setExpoPushToken(token);
     // };
 
-    registerForPushNotificationsAsync();
+    // registerForPushNotificationsAsync();
 
     notificationListener.current = Notifications.addNotificationReceivedListener((notification) => {
       setNotification(notification);
