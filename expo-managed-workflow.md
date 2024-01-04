@@ -46,6 +46,10 @@ include ':@react-native-firebase_app'
 project(':@react-native-firebase_app').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/app/android')
 ``
 
-`
+
+## Potser he de "llevar" coses, no afegir-les, segons les últimes versions
+https://github.com/invertase/react-native-firebase/issues/7217#issuecomment-1752166762
+
+
 
 

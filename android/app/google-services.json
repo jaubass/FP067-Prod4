@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "469363667286",
-    "project_id": "fp067-prod4",
-    "storage_bucket": "fp067-prod4.appspot.com"
+    "project_number": "417204717894",
+    "project_id": "frontend-5088a",
+    "storage_bucket": "frontend-5088a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:469363667286:android:64762584d90d14ff9aa6f7",
+        "mobilesdk_app_id": "1:417204717894:android:795782223d3290613f3d47",
         "android_client_info": {
           "package_name": "com.code67.prod4"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDxVMW_qHW-G1QJH_VzJhhh7vi0sLGuLMU"
+          "current_key": "AIzaSyAqRY3qWQmbWdNiAVL6EfsFkDGH8gDWV3c"
         }
       ],
       "services": {

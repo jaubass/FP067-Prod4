@@ -10,8 +10,22 @@ import { Home } from './app/views/Home';
 import { Detail } from './app/views/Detail';
 import { Player } from './app/views/Player';
 
-// Permissions
-PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+// PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
+// Permissions, by Gemma
+async function requestUserPermission() {
+  const authStatus = await messaging().requestPermission();
+  const enabled =
+    authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+    authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+
+  if (enabled) {
+    console.log('Authorization status:', authStatus);
+  }
+}
+
+// Llama a la función
+requestUserPermission();
+
 
 
 const Stack = createStackNavigator();
