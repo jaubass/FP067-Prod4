@@ -1,8 +1,8 @@
 // Libraries imports
 import { useEffect } from 'react';
+import { Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { PermissionsAndroid, Alert } from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 
 // Application imports
@@ -10,7 +10,6 @@ import { Home } from './app/views/Home';
 import { Detail } from './app/views/Detail';
 import { Player } from './app/views/Player';
 
-// PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS);
 // Permissions, by Gemma
 async function requestUserPermission() {
   const authStatus = await messaging().requestPermission();
@@ -22,11 +21,8 @@ async function requestUserPermission() {
     console.log('Authorization status:', authStatus);
   }
 }
-
 // Llama a la función
 requestUserPermission();
-
-
 
 const Stack = createStackNavigator();
 
@@ -34,7 +30,9 @@ export default function App() {
 
   useEffect(() => {
     const unsubscribe = messaging().onMessage(async remoteMessage => {
-      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+      console.log(remoteMessage);
+      // Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+      Alert.alert(remoteMessage.notification.title, remoteMessage.notification.body);
     });
 
     return unsubscribe;
