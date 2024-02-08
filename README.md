@@ -1,7 +1,7 @@
 # FP067-Prod4 - React Native
 Producto 4. [Recibiendo notificaciones push] - React Native and Firebase Cloud messaging
 
-1. Leerdetenidamenteestasinstruccioneseidentificarlos requerimientos de la actividad.
+1. Leer detenidamente estasinstruccioneseidentificarlos requerimientos de la actividad.
 2. Revisardetenidamentelarúbricadeevaluación.
 3. Consultarlosrecursosnecesariosfacilitadosenelaula.
 4. CrearunnuevorepositorionuevoenGithubenelquese
